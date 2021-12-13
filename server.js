@@ -13,5 +13,8 @@ app.get('/linux', function(req, res) {
     res.sendFile(path.join(__dirname, '/linux.html'));
 });
 
+app.use(express.static(path.resolve('./pics')));
+    app.use('/pics', express.static(path.resolve('./pics')));
+
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
