@@ -13,6 +13,10 @@ app.get('/linux', function(req, res) {
     res.sendFile(path.join(__dirname, '/linux.html'));
 });
 
+app.get('/git', function(req, res) {
+  res.sendFile(path.join(__dirname, '/git.html'));
+});
+
 app.use(express.static(path.resolve('./pics')));
     app.use('/pics', express.static(path.resolve('./pics')));
 
